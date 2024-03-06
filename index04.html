@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.min.js"> </script>
+</head>
+<body>
+  
+  <p class="title"></p>
+
+  <p class="title2"></p>
+
+  <script>
+
+    //html 형태로 삽입하기
+    // document.querySelector(".title").innerHTML = "<a href='http://www.naver.com'>짠!</a>"
+    $(".title").html("<a href='#'>짠!</a>");
+
+    //값 얻기
+    var a = $(".title").html();
+    console.log(a);
+
+    //순수한 문자로 삽입하기
+    $(".title2").text("<a href='#'>짠2</a>");
+
+  </script>
+  </p>
+</body>
+</html>

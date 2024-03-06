@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.min.js"> </script>
+</head>
+<body>
+
+  <script>
+    //js가 태그보다 위에 있어서, 화면 로딩전에 이벤트 등록이 일어남 (동작X)
+    // $("#btn").click(function(){
+    //   alert("버튼 클릭");
+    // })
+
+    //화면이 로드된 이후에 실행
+    $(document).ready(function(){
+      $("#btn").click(function(){
+        alert("버튼 클릭");
+      });
+
+    })
+    //ready는 여러개 사용가능 //window.onload는 한번만 가능
+    $(document).ready(function(){
+      $("#btn").click(function(){
+        alert("버튼 클릭222");
+      });
+
+    })
+  </script>
+
+  <button id="btn">버튼</button>
+</body>
+</html>

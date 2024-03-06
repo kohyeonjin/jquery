@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.min.js"> </script>
+</head>
+</style>
+<body>
+  <button id="btn" class="btn-btn-default">클래스제어하기</button>
+
+  <script>
+    // JS로 myBtn 클래스 추가
+    // document.querySelector("#btn").classList.add("myBtn");
+    // document.querySelector("#btn").classList.remove("myBtn");
+
+    $("#btn").addClass("myBtn");
+    $("#btn").removeClass("myBtn");
+    var a = $("#btn").hasClass("myBtn"); // 있으면 true, 없으면 false
+    console.log(a);
+
+  </script>
+
+  <button id="toggle" class="red">토글 클래스</button>
+
+  <script>
+  $("#toggle").click(function(){
+    //$(this)
+    //$(event.target)
+    $(this).toggleClass("active");
+  })
+
+  </script>
+</body>
+</html>

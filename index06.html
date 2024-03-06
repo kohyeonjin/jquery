@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.min.js"> </script>
+</head>
+<body>
+  <table class="xxx">
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>버튼</th>
+        <th>테스트</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>홍길동</td>
+        <td>
+            <button type="button" class="btn">버튼</button>
+        </td>
+        <td>
+            <span><i class="test">테스트1</i></span>
+            <span >테스트2</span>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>이순신</td>
+        <td>
+            <button type="button" class="btn">버튼</button>
+        </td>
+        <td>
+            <span><i class="test">테스트1</i></span>
+            <span >테스트2</span>
+        </td>
+    </tr>
+</table>
+
+<script>
+  $(".btn").click(function(){
+   
+    // console.log( $(event.target).closest("tr") ); // 나랑 가장 가까이에 있는 부모 tr 태그
+    // console.log( $(event.target).closest(".xxx") ); // 나랑 가장 가까이에 있는 부모 .xxx클래스 태그
+    
+    //제이쿼리 함수를 적용했을때, 다시 제이쿼리를 적용할 수 있는 제이쿼리 객체
+    //console.log( $(event.target).closest("tr").prev() ); //tr의 이전형제
+    //console.log( $(event.target).closest("tr").next() ); //tr의 다음형제
+    //console.log( $(event.target).closest("tr").siblings() ); //tr의 형제들
+
+    // console.log( $(event.target).closest("tr").children()); //tr의 자식들
+    // console.log( $(event.target).closest("tr").children().first() ); //tr의 자식들중에 첫번째
+    //console.log( $(event.target).closest("tr").children().last() ); //tr의 자식들중에 마지막
+
+    //console.log( $(event.target).closest("tr").find(".test") ); //tr의 자식중 .test를 찾음
+
+    //버튼을 누르면 "테스트2"의 html내용을 바꾸기
+
+    $(event.target).closest("tr").find(".test").closest("span").next().text("바꿈");
+
+
+
+
+
+
+
+
+  });
+
+</script>
+</body>
+</html>

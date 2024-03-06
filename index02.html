@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.min.js"> </script>
+</head>
+<body>
+  
+  <h3>attr함수</h3>
+
+  <img src="#" alt="이미지1" class="test" id="test">
+
+  <img src="#" alt="이미지2" class="test2" id="test2" width="" height="">
+
+  <script>
+
+    var a = document.querySelector("#test").src;
+    
+    //속성얻기
+    var c = $(".test").attr("id");
+    console.log(c);
+    //매개변수 2개 주면, 값 변경
+    $(".test").attr("alt","값변경");
+
+    //매개변수 객체 주면 여러 값 변경
+    $(".test2").attr({
+      alt : "수정",
+      src : "profile.png",
+      width : "200",
+      height : "200"
+    });
+
+    //속성삭제
+    $(".test2").removeAttr("height");
+
+
+  
+  </script>
+
+
+</body>
+</html>
